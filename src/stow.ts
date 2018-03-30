@@ -34,4 +34,8 @@ export default class Stow<Model extends ModelProps> {
 
     return model
   }
+
+  dump() {
+    return this.collection.values()
+  }
 }

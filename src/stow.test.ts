@@ -56,3 +56,16 @@ test('.set(id, props) with extra props', t => {
   t.is(model['name'], 'Ken Masters')
   t.is(model['age'], undefined)
 })
+
+test('.dump()', t => {
+  const { stow } = t.context
+
+  stow.set(1, { name: 'Ken Masters' })
+  stow.set(2, { name: 'Ryu Hoshi' })
+
+  const models = stow.dump()
+
+  t.is(typeof models[Symbol.iterator], 'function')
+  t.deepEqual(models.next().value, new MockModel('Ken Masters'))
+  t.deepEqual(models.next().value, new MockModel('Ryu Hoshi'))
+})
