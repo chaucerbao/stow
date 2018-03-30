@@ -10,6 +10,10 @@ export default class Stow<Model extends ModelProps> {
 
   constructor(private newModel: () => Model) {}
 
+  get size() {
+    return this.collection.size
+  }
+
   get(id: MapKey) {
     const idString = id.toString()
     const { collection, newModel } = this

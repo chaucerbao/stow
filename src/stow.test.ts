@@ -57,6 +57,18 @@ test('.set(id, props) with extra props', t => {
   t.is(model['age'], undefined)
 })
 
+test('.size', t => {
+  const { stow } = t.context
+
+  stow.set(1, { name: 'Ken Masters' })
+
+  t.is(stow.size, 1)
+
+  stow.set(2, { name: 'Ryu Hoshi' })
+
+  t.is(stow.size, 2)
+})
+
 test('.dump()', t => {
   const { stow } = t.context
 
