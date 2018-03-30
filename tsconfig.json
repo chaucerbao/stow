@@ -5,8 +5,8 @@
     "lib": ["es2015"],
     "declaration": true,
     "sourceMap": true,
-    "rootDir": "./src/",
-    "outDir": "./dist/",
+    "rootDir": "src/",
+    "outDir": "dist/",
     "importHelpers": true,
     "strict": true,
     "noUnusedLocals": true,
@@ -16,5 +16,5 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["src/**/*.ts"]
 }

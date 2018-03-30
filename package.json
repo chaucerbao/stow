@@ -2,7 +2,7 @@
   "name": "@chaucerbao/stow",
   "version": "0.1.0",
   "description": "",
-  "main": "./dist/stow.min.js",
+  "main": "dist/stow.min.js",
   "prettier": {
     "semi": false,
     "singleQuote": true
@@ -39,8 +39,8 @@
     "tslib": "^1.9.0"
   },
   "scripts": {
-    "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan 'tsc --watch' 'ava --watch ./dist/**/*.test.js'",
-    "build": "tsc && uglifyjs ./dist/stow.js --compress --mangle --source-map \"content='./dist/stow.js.map'\" --output ./dist/stow.min.js",
-    "test": "tsc && nyc ava './dist/**/*.test.js'"
+    "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan \"tsc --watch\" \"ava --watch 'dist/**/*.test.js'\"",
+    "build": "tsc && uglifyjs dist/stow.js --compress --mangle --source-map \"content='dist/stow.js.map'\" --output dist/stow.min.js",
+    "test": "tsc && nyc ava 'dist/**/*.test.js'"
   }
 }
