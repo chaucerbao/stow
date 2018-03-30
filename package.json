@@ -1,0 +1,41 @@
+{
+  "name": "stow",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./dist/stow.min.js",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "author": "Alvin Chan <no@email.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "concurrently": "^3.5.1",
+    "husky": "^0.15.0-rc.13",
+    "lint-staged": "^7.0.0",
+    "nyc": "^11.6.0",
+    "prettier": "^1.11.1",
+    "typescript": "^2.8.1",
+    "uglify-js": "^3.3.16"
+  },
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "scripts": {
+    "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan 'tsc --watch' 'ava --watch ./dist/**/*.test.js'",
+    "build": "tsc && uglifyjs ./dist/stow.js --compress --mangle --source-map \"content='./dist/stow.js.map'\" --output ./dist/stow.min.js",
+    "test": "tsc && nyc ava './dist/**/*.test.js'"
+  }
+}
