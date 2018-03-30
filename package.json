@@ -18,6 +18,11 @@
       "pre-commit": "lint-staged"
     }
   },
+  "files": [
+    "dist/stow.d.ts",
+    "dist/stow.min.js",
+    "dist/stow.min.js.map"
+  ],
   "author": "Alvin Chan <no@email.com>",
   "license": "ISC",
   "devDependencies": {
