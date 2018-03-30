@@ -35,9 +35,6 @@
     "typescript": "^2.8.1",
     "uglify-js": "^3.3.16"
   },
-  "dependencies": {
-    "tslib": "^1.9.0"
-  },
   "scripts": {
     "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan \"tsc --watch\" \"ava --watch 'dist/**/*.test.js'\"",
     "build": "tsc && uglifyjs dist/stow.js --compress --mangle --source-map \"content='dist/stow.js.map'\" --output dist/stow.min.js",
