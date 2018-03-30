@@ -1,5 +1,5 @@
 {
-  "name": "stow",
+  "name": "@chaucerbao/stow",
   "version": "0.1.0",
   "description": "",
   "main": "./dist/stow.min.js",
