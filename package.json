@@ -2,8 +2,10 @@
   "name": "@chaucerbao/stow",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/stow.js",
-  "types": "dist/stow.d.ts",
+  "author": "Alvin Chan <no@email.com>",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "prettier": {
     "semi": false,
     "singleQuote": true
@@ -20,12 +22,10 @@
     }
   },
   "files": [
-    "dist/stow.d.ts",
-    "dist/stow.js",
-    "dist/stow.js.map"
+    "dist/index.d.ts",
+    "dist/index.js",
+    "dist/index.js.map"
   ],
-  "author": "Alvin Chan <no@email.com>",
-  "license": "ISC",
   "devDependencies": {
     "ava": "^0.25.0",
     "concurrently": "^3.5.1",
