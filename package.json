@@ -2,7 +2,7 @@
   "name": "@chaucerbao/stow",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/stow.min.js",
+  "main": "dist/stow.js",
   "prettier": {
     "semi": false,
     "singleQuote": true
@@ -20,8 +20,8 @@
   },
   "files": [
     "dist/stow.d.ts",
-    "dist/stow.min.js",
-    "dist/stow.min.js.map"
+    "dist/stow.js",
+    "dist/stow.js.map"
   ],
   "author": "Alvin Chan <no@email.com>",
   "license": "ISC",
@@ -32,12 +32,11 @@
     "lint-staged": "^7.0.0",
     "nyc": "^11.6.0",
     "prettier": "^1.11.1",
-    "typescript": "^2.8.1",
-    "uglify-js": "^3.3.16"
+    "typescript": "^2.8.1"
   },
   "scripts": {
     "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan \"tsc --watch\" \"ava --watch\"",
-    "build": "tsc && uglifyjs dist/stow.js --compress --mangle --source-map \"content='dist/stow.js.map'\" --output dist/stow.min.js",
+    "prepare": "tsc",
     "test": "tsc && nyc ava"
   }
 }
