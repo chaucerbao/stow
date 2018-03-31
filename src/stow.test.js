@@ -1,12 +1,19 @@
+// Dependencies
 import test from 'ava'
-import Stow from './stow'
 
+// Stow
+import Stow from '../dist/stow'
+
+// Mocks
 class MockModel {
-  constructor(public name: string) {}
+  constructor(name) {
+    this.name = name
+  }
 }
 
+// Tests
 test.beforeEach(t => {
-  t.context.stow = new Stow<MockModel>(() => new MockModel('Initial name'))
+  t.context.stow = new Stow(() => new MockModel('Initial name'))
 })
 
 test('new Stow()', t => {
