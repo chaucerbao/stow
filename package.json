@@ -29,14 +29,15 @@
     "ava": "^0.25.0",
     "concurrently": "^3.5.1",
     "husky": "^0.15.0-rc.13",
-    "lint-staged": "^7.0.0",
+    "lint-staged": "^7.0.1",
     "nyc": "^11.6.0",
     "prettier": "^1.11.1",
+    "shx": "^0.2.2",
     "typescript": "^2.8.1"
   },
   "scripts": {
-    "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan \"tsc --watch\" \"ava --watch\"",
-    "prepare": "tsc",
+    "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan 'tsc --watch' 'ava --watch'",
+    "prepare": "shx rm -rf dist/ && tsc",
     "test": "tsc && nyc ava"
   }
 }
