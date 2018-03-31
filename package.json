@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "main": "dist/stow.js",
+  "types": "dist/stow.d.ts",
   "prettier": {
     "semi": false,
     "singleQuote": true
