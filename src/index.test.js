@@ -2,7 +2,7 @@
 import test from 'ava'
 
 // Stow
-import Stow from '../dist/stow'
+import Stow from '../dist'
 
 // Mocks
 class MockModel {
