@@ -1,11 +1,20 @@
+// Dependencies
+import { observable } from 'mobx'
+
 // Type definitions
 export type Key = string | number
+export interface Options {
+  observable?: typeof observable
+}
 
 // Stow
 export default class Stow<Model extends { [key: string]: any }> {
   private stowage: Map<Key, Model> = new Map()
 
-  constructor(private newModel: () => Model) {}
+  constructor(private newModel: () => Model, options: Options = {}) {
+    const { observable } = options
+    this.stowage = observable ? observable(new Map()) : new Map()
+  }
 
   get size() {
     return this.stowage.size
