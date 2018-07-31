@@ -13,7 +13,7 @@ export default class Stow<Model extends { [key: string]: any }> {
 
   constructor(private newModel: () => Model, options: Options = {}) {
     const { observable } = options
-    this.stowage = observable ? observable(new Map()) : new Map()
+    this.stowage = observable ? observable.map<Key, Model>() : new Map()
   }
 
   get size() {
