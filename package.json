@@ -28,16 +28,16 @@
   ],
   "devDependencies": {
     "ava": "^0.25.0",
-    "concurrently": "^3.5.1",
+    "concurrently": "^3.6.1",
     "husky": "^0.15.0-rc.13",
-    "lint-staged": "^7.0.1",
-    "nyc": "^11.6.0",
-    "prettier": "^1.11.1",
-    "shx": "^0.2.2",
-    "typescript": "^2.8.1"
+    "lint-staged": "^7.2.0",
+    "nyc": "^12.0.2",
+    "prettier": "^1.14.0",
+    "shx": "^0.3.2",
+    "typescript": "^3.0.1"
   },
   "optionalDependencies": {
-    "mobx": "^4.1.1"
+    "mobx": "^5.0.3"
   },
   "scripts": {
     "start": "concurrently --names TS,AVA --prefix-colors magenta,cyan 'tsc --watch' 'ava --watch'",
