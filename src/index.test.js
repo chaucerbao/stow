@@ -87,12 +87,12 @@ test('.size', t => {
   })
 })
 
-test('.dump()', t => {
+test('.values()', t => {
   t.context.stows.forEach(stow => {
     stow.set(1, { name: 'Ken Masters' })
     stow.set(2, { name: 'Ryu Hoshi' })
 
-    const models = stow.dump()
+    const models = stow.values()
 
     t.is(typeof models[Symbol.iterator], 'function')
     t.deepEqual(models.next().value, new MockModel('Ken Masters'))

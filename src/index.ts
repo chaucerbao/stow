@@ -45,7 +45,7 @@ export default class Stow<Model extends { [key: string]: any }> {
     return model
   }
 
-  dump() {
+  values() {
     return this.stowage.values()
   }
 }
